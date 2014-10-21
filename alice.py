@@ -17,3 +17,10 @@ def makeString():
         return prospective
     else:
         return makeString()
+
+if __name__ == '__main__':
+    import sys
+    sys.path.append('../twitterbot')
+    import tb
+    TB = tb.Twitterbot()
+    TB.api.PostUpdate(makeString())
